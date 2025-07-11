@@ -1,9 +1,9 @@
 import React from 'react';
-import Logo from '@/assets/hussle-logo-top-left.png';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import Logo from '/hussle-logo-top-left.png';
+import { Button } from '../components/ui/button';
+import { Card, CardContent, CardTitle, CardDescription } from '../components/ui/card';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
 import { Twitter, GitHub, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -34,18 +34,18 @@ export default function HussleSolutionsLandingPage() {
             whileHover={{ scale: 1.05 }}
           />
           <ul className="hidden md:flex space-x-8 font-medium">
-            {['Home', 'Features', 'About', 'Contact'].map((item) => (
+            {['home', 'features', 'about', 'contact'].map((section) => (
               <motion.li
-                key={item}
+                key={section}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
                 <a
-                  href={`#${item.toLowerCase()}`}
-                  className="transition-colors duration-200 hover:text-blue-600"
+                  href={`#${section}`}
+                  className="capitalize transition-colors duration-200 hover:text-blue-600"
                 >
-                  {item}
+                  {section}
                 </a>
               </motion.li>
             ))}
@@ -91,7 +91,7 @@ export default function HussleSolutionsLandingPage() {
                 transition={{ duration: 0.3 }}
               >
                 <Button className="mt-8 px-10 py-4 text-lg">
-                  Book a Free Demo
+                  Book Free Demo
                 </Button>
               </motion.div>
             </a>
